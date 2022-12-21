@@ -1,0 +1,18 @@
+#textoPrincipal {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+.fundoVermelho {
+    background-color: red;
+
+}
+
+h1 { 
+    background-color: brown;
+    font-size: 20px;
+}
