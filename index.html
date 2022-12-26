@@ -18,15 +18,15 @@
     <nav>
         <a href="exercicios/teste.html"> 00 - Teste</a><br>
         <a href="exercicios/formatacao2.html"> 01 - Texto</a><br>
-     
+        <a href="exercicios/listas.html"> 02 - Listas Simples</a><br>
+        <a href="exercicios/listaAninhadas.html"> 03 - Listas Aninhadas</a><br>
 
     </nav>
     <section id="conteudo"></section>
     <footer>Curso de Web Design</footer>
     <script>
         document.querySelectorAll('a').forEach(link => { 
-            const conteudo = document.getElementById('conteudo')
-
+            
             link.onclick = function(e) {
                 e.preventDefault()
                 fetch(link.href)
