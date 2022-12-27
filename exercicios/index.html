@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Server</title>
+    <style>
+        #conteudo {
+            padding: 30px 0px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Exercícios HTML
+    </header>
+    <nav>
+        <button><a href="teste.html"> 00 - Teste</a></button><br><br>
+        <button><a href="formatacao2.html"> 01 - Texto</a></button><br><br>
+        <button><a href="listas.html"> 02 - Listas Simples</a></button><br><br>
+        <button><a href="listaAninhadas.html"> 03 - Listas Aninhadas</a>
+        </button><br>
+        
+
+
+
+    </nav>
+
+    <section id="conteudo"></section>
+    <footer>Curso de Web Design</footer>
+    <script>
+        document.querySelectorAll('a').forEach(folder => {
+           folder.onclick = function(e) {
+                
+                const ul = folder.nextElementSibling
+                const d = ul.style.display
+                ul.style.display = d === "none" ? "block" : "none"
+           }
+        })
+    </script>
+
+</body>
+</html>

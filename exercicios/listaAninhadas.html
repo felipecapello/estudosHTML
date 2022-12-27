@@ -5,17 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista Aninhadas</title>
+
 </head>
 <body>
-    <h1>Projeto</h1>
+    <h1>Lista De Compras</h1>
 
     <ul class="tree">
         
         <li>
-            backend
+           <span wm-folder>Mercado</span>
             <ul>
                 <li>
-                    app
+                    <span wm-folder>Comida</span>
                     <ul>
                         <li>produto.js</li>
                         <li>usuario.js</li>
@@ -23,8 +24,9 @@
                     </ul>
                 </li>
                 <li>
-                    config
+                    <span wm-folder>Limpeza</span>
                     <ul>
+
                         <li>banco.js</li>
                         <li>rotas.js</li>
                         <li>servidor.js</li>
@@ -34,16 +36,17 @@
             </ul>
     </li>
         <li>
-        frontend
+            <span wm-folder>Farmácia</span>
             <ul>
                 <li>
-                    public
+                    <span wm-folder>Mochila</span>
                     <ul>
                         <li>app.css</li>
                         <li>app.js</li>
                         <li>index.html</li>
     
                     </ul>
+
                 </li>
                
              
@@ -51,17 +54,19 @@
      </li>
 </ul>
 
-<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
-
 <script>
-    console.log("teste")
+    document.querySelectorAll('[wm-folder').forEach(folder => {
+       folder.onclick = function(e) {
+            const ul = folder.nextElementSibling
+            const d = ul.style.display
+            ul.style.display = d === "none" ? "block" : "none"
+       }
+    })
 </script>
 
-<button> 
-    <a href="index.html"> Voltar</a><br>
-
+<button>
+    <a href="index.html">Voltar</a>
 </button>
-
 
 </body>
 </html>

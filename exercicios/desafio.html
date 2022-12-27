@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Aninhadas</title>
+</head>
+<body>
+    <h1>Lista de compras</h1>
+
+    <ul >
+        
+        <li>
+        <span wm-folder>Mercado</span> 
+            <ul>
+                <li>
+                <span wm-folder>Comida</span> 
+                    <ol>
+                        <b><li>Maça</li></b>
+                        <b><li>Banana</li></b>
+                        <b><li>Leite</li></b>
+                    </ol>
+                </li>
+                <li>
+                <span wm-folder>Limpeza</span>
+                    <ol>
+                        <b><li>Veja</li></b>
+                        <b><li>Detergente</li></b>
+                        <b><li>Bucha</li></b>
+
+                    </ol>
+                </li>
+            </ul>
+    </li>
+        <li>
+        <span wm-folder>Farmacia</span> 
+            <ul>
+                <li>
+                    <span wm-folder>Mochila</span> 
+                    <ol>
+                        <b><li>Dorflex</li></b>
+                        <b><li>Cinegripe</li></b>
+                        <b><li>Dipirona</li></b>
+    
+                    </ol>
+                </li>
+               
+             
+         </ul>
+     </li>
+</ul>
+
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+
+<script>
+    document.querySelectorAll('[wm-folder').forEach(folder => {
+        folder.onclick = function(e) {
+            const ul = folder.nextElementSibling
+            const d = ul.style.display
+            ul.style.display = d === 'none' ? 'block' : 'none'
+        }
+    })
+</script>
+
+
+
+
+</body>
+</html>
