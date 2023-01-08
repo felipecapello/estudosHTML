@@ -12,41 +12,39 @@
     </style>
 </head>
 <body>
-    <h1>Estrutura arvore</h1>
+    <header>
+        Exercícios HTML
+    </header>
+    <nav>
+        <button><a href="exercicios/teste.html"> 00 - Teste</a></button><br><br>
+        <button><a href="exercicios/formatacao2.html"> 01 - Texto</a></button><br><br>
+        <button><a href="exercicios/listas.html"> 02 - Listas Simples</a></button><br><br>
+        <button><a href="exercicios/listaAninhadas.html"> 03 - Listas Aninhadas</a>
+        </button><br><br>
+        <button><a href="exercicios/link01.html"> 04 - Links</a></button><br><br>
+        <button><a href="exercicios/tabela.html"> 05 - Tabelas</a></button><br><br>
+        <button><a href="imagens/imagem.html"> 06 - Imagens</a></button><br><br>
+        
+        
 
-    <ul>
-        <li>
-        <nav>
 
-            <a href="desafio/backend.html"> Backend</a><br>
-            
-        </nav>
 
-            <ul>
-                <li>
-                    <nav>
+    </nav>
 
-                        <a href="desafio/App.html"> App</a><br>
-                        
-                    </nav>
-                </li>
-            </ul>
-        </li>
-    </ul>
-
-    
     <section id="conteudo"></section>
-    
+    <footer>Curso de Web Design</footer>
     <script>
-        document.querySelectorAll('a').forEach(link => { 
-            
-            link.onclick = function(e) {
-                e.preventDefault()
-                fetch(link.href)
-                    .then(resp => resp.text())
-                    .then(html => conteudo.innerHTML = html)
-                    
-                }
+        document.querySelectorAll('a').forEach(folder => {
+           folder.onclick = function(e) {
+                
+                const ul = folder.nextElementSibling
+                const d = ul.style.display
+                ul.style.display = d === "none" ? "block" : "none"
+           }
         })
-
     </script>
+
+    
+
+</body>
+</html>
