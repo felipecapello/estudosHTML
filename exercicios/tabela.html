@@ -9,7 +9,7 @@
 <body>
    <h1>Tabelas em HTML</h1>
 
-   <table border="2">
+   <table> <!-- border="2"  pode ser usado para colocar um certo tipo de borda-->
      <caption>Produtos!</caption><!-- Explicando sobre oque é a tabela -->
 
         <thead><!-- Area do cabeçalho -->
@@ -38,15 +38,38 @@
         </tbody>
         <tfoot>
             <tr> 
-                <td colspan="3">Total</td>
-                <td>Total</td>
+                <td colspan="3" rowspan="2">Total</td>
+                <td>145.000,00</td>
+                
 
             </tr>
-            
+         
         </tfoot>
      
     
    </table> <br><br>
+
+   <style>
+        table {
+            border-collapse: collapse ; /* Serve para não existir nenhum tipo de borda */
+
+        }
+        th, td {
+            padding: 10px; /* Espaçamento entre elementos da tabela */
+        }
+        thead tr {
+            border-bottom: solid 3px #444;
+        }
+        tbody tr:hover {
+            background-color: #dedede;
+        }
+        tfoot{
+            background-color: #444;
+            color: #dedede;
+            font-weight: bold;
+            
+        }
+   </style>
 
    <button>
         <a href="index.html">Voltar!</a>
